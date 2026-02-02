@@ -317,6 +317,17 @@ body {
     margin-bottom: 0.5rem;
 }
 
+.person-card h4 a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.person-card h4 a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
 .person-card .affiliation {
     color: var(--text-light);
     font-size: 0.95rem;
