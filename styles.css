@@ -1,4 +1,4 @@
-/* Modern Minimal Styling for C2C Doctoral Workshop */
+/* Retro Old-School Styling for C2C Doctoral Workshop */
 
 * {
     margin: 0;
@@ -7,16 +7,17 @@
 }
 
 :root {
-    --primary-color: #1a365d;
-    --secondary-color: #0d9488;
-    --accent-color: #14b8a6;
-    --text-color: #1e293b;
-    --text-light: #64748b;
+    --primary-color: #000000;
+    --secondary-color: #333333;
+    --accent-color: #ffeb3b;
+    --text-color: #000000;
+    --text-light: #333333;
     --bg-color: #ffffff;
-    --bg-alt: #f8fafc;
-    --border-color: #e2e8f0;
-    --shadow: 0 2px 8px rgba(0,0,0,0.1);
-    --hero-bg: #1e3a5f;
+    --bg-alt: #fffef7;
+    --border-color: #000000;
+    --border-width: 3px;
+    --shadow: none;
+    --hero-bg: #fffef7;
 }
 
 html {
@@ -24,10 +25,12 @@ html {
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Courier New', 'Courier', monospace, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--bg-color);
+    image-rendering: pixelated;
+    -webkit-font-smoothing: antialiased;
 }
 
 .container {
@@ -39,12 +42,10 @@ body {
 /* Navigation */
 .navbar {
     background: var(--bg-color);
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: var(--border-width) solid var(--border-color);
     position: sticky;
     top: 0;
     z-index: 100;
-    backdrop-filter: blur(10px);
-    background-color: rgba(255, 255, 255, 0.95);
 }
 
 .navbar .container {
@@ -56,8 +57,9 @@ body {
 
 .nav-brand {
     font-size: 1.25rem;
-    font-weight: 600;
+    font-weight: 700;
     color: var(--primary-color);
+    letter-spacing: -0.5px;
 }
 
 .nav-links {
@@ -68,80 +70,46 @@ body {
 .nav-links a {
     color: var(--text-color);
     text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
+    font-weight: 700;
+    transition: none;
     position: relative;
+    padding: 0.5rem 1rem;
+    border: var(--border-width) solid transparent;
 }
 
 .nav-links a:hover {
-    color: var(--secondary-color);
-}
-
-.nav-links a::after {
-    content: '';
-    position: absolute;
-    bottom: -4px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: var(--secondary-color);
-    transition: width 0.3s ease;
-}
-
-.nav-links a:hover::after {
-    width: 100%;
+    background: var(--accent-color);
+    border: var(--border-width) solid var(--border-color);
 }
 
 /* Hero Section */
 .hero {
     background: var(--hero-bg);
-    color: white;
-    padding: 6rem 0;
+    color: var(--primary-color);
+    padding: 4rem 0;
     text-align: center;
-    position: relative;
-    overflow: hidden;
-}
-
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background:
-        repeating-linear-gradient(
-            45deg,
-            transparent,
-            transparent 10px,
-            rgba(255, 255, 255, 0.03) 10px,
-            rgba(255, 255, 255, 0.03) 20px
-        );
-    pointer-events: none;
+    border-bottom: var(--border-width) solid var(--border-color);
 }
 
 .hero h1 {
-    font-size: 3rem;
-    font-weight: 700;
+    font-size: 2.5rem;
+    font-weight: 900;
     margin-bottom: 1rem;
-    letter-spacing: -0.02em;
-    position: relative;
-    z-index: 1;
+    letter-spacing: -1px;
+    text-transform: none;
 }
 
 .hero .subtitle {
-    font-size: 1.25rem;
-    opacity: 0.95;
+    font-size: 1.1rem;
     max-width: 700px;
     margin: 0 auto;
-    font-weight: 300;
-    position: relative;
-    z-index: 1;
+    font-weight: 400;
 }
 
 /* Sections */
 .section {
-    padding: 5rem 0;
+    padding: 4rem 0;
+    border-bottom: var(--border-width) solid var(--border-color);
 }
 
 .section-alt {
@@ -149,17 +117,18 @@ body {
 }
 
 .section h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
+    font-size: 2rem;
+    font-weight: 900;
     margin-bottom: 3rem;
     color: var(--primary-color);
     text-align: center;
-    letter-spacing: -0.02em;
+    letter-spacing: -1px;
+    text-transform: uppercase;
 }
 
 .section h3 {
-    font-size: 1.5rem;
-    font-weight: 600;
+    font-size: 1.3rem;
+    font-weight: 700;
     margin-bottom: 1rem;
     color: var(--primary-color);
 }
@@ -175,9 +144,8 @@ body {
 .content-block {
     background: var(--bg-color);
     padding: 2rem;
-    border-radius: 8px;
-    box-shadow: var(--shadow);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: var(--border-width) solid var(--border-color);
+    transition: none;
 }
 
 .section-alt .content-block {
@@ -185,8 +153,7 @@ body {
 }
 
 .content-block:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    background: var(--accent-color);
 }
 
 .content-block p {
@@ -217,8 +184,8 @@ body {
     left: 20px;
     top: 0;
     bottom: 0;
-    width: 2px;
-    background: var(--secondary-color);
+    width: var(--border-width);
+    background: var(--border-color);
 }
 
 .timeline-item {
@@ -233,17 +200,14 @@ body {
     top: 0;
     width: 20px;
     height: 20px;
-    border-radius: 50%;
-    background: var(--secondary-color);
-    border: 4px solid var(--bg-alt);
-    box-shadow: 0 0 0 4px var(--secondary-color);
+    background: var(--primary-color);
+    border: var(--border-width) solid var(--border-color);
 }
 
 .timeline-content {
     background: var(--bg-color);
     padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: var(--shadow);
+    border: var(--border-width) solid var(--border-color);
 }
 
 .timeline-content h3 {
@@ -295,10 +259,9 @@ body {
 .person-card {
     background: var(--bg-color);
     padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: var(--shadow);
+    border: var(--border-width) solid var(--border-color);
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: none;
 }
 
 .section-alt .person-card {
@@ -306,8 +269,7 @@ body {
 }
 
 .person-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    background: var(--accent-color);
 }
 
 .person-card h4 {
@@ -319,13 +281,14 @@ body {
 
 .person-card h4 a {
     color: var(--primary-color);
-    text-decoration: none;
-    transition: color 0.3s ease;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    transition: none;
 }
 
 .person-card h4 a:hover {
-    color: var(--secondary-color);
-    text-decoration: underline;
+    background: var(--accent-color);
+    text-decoration: none;
 }
 
 .person-card .affiliation {
@@ -344,17 +307,17 @@ body {
 .cta {
     margin-top: 2rem;
     padding: 2rem;
-    background: var(--secondary-color);
-    color: white;
-    border-radius: 8px;
+    background: var(--accent-color);
+    color: var(--primary-color);
     text-align: center;
-    border: 2px solid var(--accent-color);
+    border: var(--border-width) solid var(--border-color);
 }
 
 .cta p {
-    color: white;
+    color: var(--primary-color);
     font-size: 1.1rem;
     margin: 0;
+    font-weight: 700;
 }
 
 /* Footer */
@@ -363,10 +326,12 @@ footer {
     color: white;
     padding: 2rem 0;
     text-align: center;
+    border-top: var(--border-width) solid var(--border-color);
 }
 
 footer p {
-    color: rgba(255, 255, 255, 0.8);
+    color: white;
+    font-weight: 400;
 }
 
 /* Responsive Design */
