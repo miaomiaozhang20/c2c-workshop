@@ -7,17 +7,17 @@
 }
 
 :root {
-    --primary-color: #000000;
-    --secondary-color: #333333;
-    --accent-color: #ffeb3b;
-    --text-color: #000000;
-    --text-light: #333333;
-    --bg-color: #ffffff;
-    --bg-alt: #fffef7;
-    --border-color: #000000;
+    --primary-color: #3d2e5f;
+    --secondary-color: #a8556c;
+    --accent-color: #f5e6d3;
+    --text-color: #1a1a1a;
+    --text-light: #5a4a6a;
+    --bg-color: #fdfbf7;
+    --bg-alt: #e8dff5;
+    --border-color: #3d2e5f;
     --border-width: 3px;
     --shadow: none;
-    --hero-bg: #fffef7;
+    --hero-bg: #3d2e5f;
 }
 
 html {
@@ -85,7 +85,7 @@ body {
 /* Hero Section */
 .hero {
     background: var(--hero-bg);
-    color: var(--primary-color);
+    color: white;
     padding: 4rem 0;
     text-align: center;
     border-bottom: var(--border-width) solid var(--border-color);
@@ -97,6 +97,7 @@ body {
     margin-bottom: 1rem;
     letter-spacing: -1px;
     text-transform: none;
+    color: var(--accent-color);
 }
 
 .hero .subtitle {
@@ -104,6 +105,7 @@ body {
     max-width: 700px;
     margin: 0 auto;
     font-weight: 400;
+    color: white;
 }
 
 /* Sections */
@@ -120,7 +122,7 @@ body {
     font-size: 2rem;
     font-weight: 900;
     margin-bottom: 3rem;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     text-align: center;
     letter-spacing: -1px;
     text-transform: uppercase;
@@ -130,7 +132,7 @@ body {
     font-size: 1.3rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 /* Content Grid */
@@ -153,7 +155,7 @@ body {
 }
 
 .content-block:hover {
-    background: var(--accent-color);
+    background: var(--bg-alt);
 }
 
 .content-block p {
@@ -213,6 +215,7 @@ body {
 .timeline-content h3 {
     color: var(--secondary-color);
     margin-bottom: 0.5rem;
+    font-weight: 700;
 }
 
 .timeline-content p {
@@ -269,7 +272,7 @@ body {
 }
 
 .person-card:hover {
-    background: var(--accent-color);
+    background: var(--bg-alt);
 }
 
 .person-card h4 {
@@ -307,14 +310,14 @@ body {
 .cta {
     margin-top: 2rem;
     padding: 2rem;
-    background: var(--accent-color);
-    color: var(--primary-color);
+    background: var(--secondary-color);
+    color: white;
     text-align: center;
-    border: var(--border-width) solid var(--border-color);
+    border: var(--border-width) solid var(--primary-color);
 }
 
 .cta p {
-    color: var(--primary-color);
+    color: white;
     font-size: 1.1rem;
     margin: 0;
     font-weight: 700;
@@ -323,14 +326,14 @@ body {
 /* Footer */
 footer {
     background: var(--primary-color);
-    color: white;
+    color: var(--accent-color);
     padding: 2rem 0;
     text-align: center;
     border-top: var(--border-width) solid var(--border-color);
 }
 
 footer p {
-    color: white;
+    color: var(--accent-color);
     font-weight: 400;
 }
 
