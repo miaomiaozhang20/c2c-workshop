@@ -97,7 +97,7 @@ body {
     margin-bottom: 1rem;
     letter-spacing: -1px;
     text-transform: none;
-    color: var(--accent-color);
+    color: #ffffff;
 }
 
 .hero .subtitle {
